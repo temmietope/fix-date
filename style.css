@@ -1,0 +1,438 @@
+@font-face {
+  font-family: Cerebri Sans;
+  src: url('./assets/fonts/CerebriSans-Regular.ttf');
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'PT Serif', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin: 0 20%;
+  background-color: #f9fefb;
+  padding: 1.4rem 2.5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.profile {
+  width: 100%;
+  height: 3.185rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile__avatar {
+  width: 3.1875rem;
+  height: 3.1875rem;
+  background-color: #ffb48f;
+  border-radius: 50%;
+  margin-right: 3%;
+}
+.profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.profile p {
+  font-size: 1.5rem;
+  color: #121212;
+  font-family: 'PT Serif';
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 1.2rem 0;
+}
+.schedule h1 {
+  color: #121212;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 37px;
+}
+.schedule button {
+  outline: none;
+  border: 0;
+  height: 2.5625rem;
+  width: 9.75rem;
+  border-radius: 100px 100px;
+  background-color: rgba(255, 157, 0, 0.05);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.04);
+  font-size: 0.85rem;
+  color: #e78f00;
+  border: 1px solid #e78f00;
+  font-family: Cerebri Sans;
+}
+.cards {
+  height: 12.25rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  height: 5.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border-radius: 6px;
+  font-family: Cerebri Sans;
+}
+.card--green {
+  background-color: rgba(0, 194, 103, 0.1);
+}
+.card--green .card__button {
+  background-color: #00c267;
+}
+.card--orange {
+  background-color: #f9f5e1;
+}
+.card--orange .card__button {
+  background-color: #ffbe56;
+}
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  box-sizing: border-box;
+}
+.card--green .card__button p:nth-child(1) {
+  text-decoration: line-through;
+  font-weight: lighter;
+  margin-bottom: 3%;
+}
+.card__description {
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+.card__description p {
+  color: #1b1b1b;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.getting-started {
+  width: 100%;
+  height: 20.75rem;
+  background-color: #e4f5fd;
+  margin: 2rem 0;
+  padding: 5%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+.getting-started .getting-started__header {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.getting-started .getting-started__header h3 {
+  color: #121212;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  line-height: 1.5rem;
+}
+.getting-started .getting-started__header p {
+  color: #383838;
+  font-family: Cerebri Sans;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 1.1px;
+  line-height: 1.1rem;
+}
+.getting-started__actions {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  justify-content: space-between;
+}
+.getting-started__action {
+  padding: 10% 5%;
+  box-sizing: border-box;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column; */
+  display: grid;
+  grid-template-rows: 3rem auto 2rem;
+}
+.getting-started__action__image {
+  width: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.action--call .getting-started__action__image {
+  background-color: rgba(190, 164, 255, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.action--play .getting-started__action__image {
+  background-color: rgba(255, 146, 101, 0.7);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.getting-started__action__image img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+}
+.getting-started__action h5 {
+  color: #383838;
+  font-family: Cerebri Sans;
+  line-height: 20px;
+  font-weight: 300;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.getting-started__action p {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.getting-started__action span {
+  font-family: Cerebri Sans;
+  text-decoration: underline;
+}
+.action--call span {
+  color: #8a5cff;
+}
+.action--play span {
+  color: #ff682a;
+}
+.getting-started__action p img {
+  margin-left: 1rem;
+  width: 1rem;
+}
+.activity__card {
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+.activity__card h2 {
+  color: #00c267;
+  font-family: 'PT Serif';
+  font-size: 1.325rem;
+  line-height: 22px;
+  font-weight: 300;
+}
+.activity__card__detail {
+  height: 70%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  width: 100%;
+}
+.activity__card__detail p {
+  font-family: 'Cerebri Sans';
+  font-size: 0.9rem;
+}
+.activity__card__detail p:nth-child(2) {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #e4f5fd;
+  display: flex;
+  align-items: center;
+  color: #121212;
+  font-family: Cerebri Sans;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 19px;
+  padding: 5%;
+  box-sizing: border-box;
+}
+footer {
+  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+}
+.footer__wrapper {
+  background-color: rgba(244, 244, 244, 0.75);
+  height: 100%;
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  box-sizing: border-box;
+}
+.footer__wrapper li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  height: 100%;
+}
+.footer__wrapper li img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.footer__wrapper li p {
+  color: #303030;
+  font-family: Cerebri Sans;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+@media only screen and (max-width: 900px) {
+  .container,
+  .footer__wrapper {
+    margin: 0 10%;
+  }
+}
+@media only screen and (max-width: 790px) {
+    .container,
+    .footer__wrapper {
+      margin: 0 5%;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 1rem 1.75rem;
+  }
+  .container,
+  .footer__wrapper {
+    margin: 0;
+  }
+  .profile {
+    /* flex: 1; */
+    width: 100%;
+    height: 2.1875rem;
+  }
+  .profile__avatar {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .profile p {
+    font-size: 1.0625rem;
+  }
+  .schedule {
+    height: 2.3125rem;
+  }
+  .schedule h1 {
+    font-size: 1.75rem;
+  }
+  .schedule button {
+    height: 1.5625rem;
+    width: 8.75rem;
+    border-radius: 13px;
+    font-size: 0.75rem;
+  }
+  .cards {
+    height: 9.25rem;
+  }
+  .card {
+    height: 4rem;
+  }
+  .card__description {
+    padding: 0.5rem;
+  }
+  .card__description p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .card__button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  .getting-started {
+    height: 15.75rem;
+  }
+  .getting-started .getting-started__header h3 {
+    font-size: 1.0625rem;
+    letter-spacing: 1.0625px;
+    line-height: 1.25rem;
+  }
+  .getting-started .getting-started__header p {
+    font-size: 0.875rem;
+    letter-spacing: 0.875px;
+    line-height: 1rem;
+  }
+  .getting-started__action {
+    display: grid;
+    grid-template-rows: 2.5rem auto 2rem;
+  }
+  .getting-started__action__image {
+    width: 2.5rem;
+  }
+  .getting-started__action h5 {
+    font-size: 0.875rem;
+  }
+
+  .getting-started__action p {
+    font-size: 0.875rem;
+  }
+
+  .getting-started__action p img {
+    margin-left: 0.5rem;
+    width: 0.875rem;
+  }
+
+  .activity__card h2 {
+    font-size: 1.0625rem;
+    line-height: 22px;
+  }
+  .activity__card__detail p {
+    font-size: 0.75rem;
+  }
+  .activity__card__detail p:nth-child(2) {
+    font-weight: 300;
+    line-height: 19px;
+    font-size: 0.9375rem;
+  }
+  footer {
+    height: 4.625rem;
+  }
+  .footer__wrapper li img {
+    height: 1.25rem;
+  }
+  .footer__wrapper li p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card__description p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
