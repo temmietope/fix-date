@@ -148,19 +148,20 @@ ul {
   padding: 5%;
   box-sizing: border-box;
   border-radius: 6px;
-  display: grid;
-  grid-template-rows: 20% 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 .getting-started .getting-started__header {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  height: 20%;
 }
 .getting-started .getting-started__header h3 {
   color: #121212;
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 1.6px;
   line-height: 1.5rem;
 }
 .getting-started .getting-started__header p {
@@ -168,21 +169,21 @@ ul {
   font-family: Cerebri Sans;
   font-weight: 300;
   font-size: 1.1rem;
-  letter-spacing: 1.1px;
   line-height: 1.1rem;
 }
 .getting-started__actions {
   display: grid;
   grid-template-columns: 47% 47%;
   justify-content: space-between;
+  height: 70%;
 }
 .getting-started__action {
   padding: 10% 5%;
   box-sizing: border-box;
   /* display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-flow: column; */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: column; */
   display: grid;
   grid-template-rows: 3rem auto 2rem;
 }
@@ -319,11 +320,11 @@ footer {
   }
 }
 @media only screen and (max-width: 790px) {
-    .container,
-    .footer__wrapper {
-      margin: 0 5%;
-    }
+  .container,
+  .footer__wrapper {
+    margin: 0 5%;
   }
+}
 
 @media only screen and (max-width: 600px) {
   .container {
@@ -379,23 +380,27 @@ footer {
   }
   .getting-started .getting-started__header h3 {
     font-size: 1.0625rem;
-    letter-spacing: 1.0625px;
     line-height: 1.25rem;
   }
   .getting-started .getting-started__header p {
     font-size: 0.875rem;
-    letter-spacing: 0.875px;
     line-height: 1rem;
   }
   .getting-started__action {
-    display: grid;
-    grid-template-rows: 2.5rem auto 2rem;
+    padding: 10% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
   }
   .getting-started__action__image {
+    height: 2.5rem;
     width: 2.5rem;
   }
   .getting-started__action h5 {
     font-size: 0.875rem;
+    height: auto;
+    margin: 3% 0;
+    width: 100%;
   }
 
   .getting-started__action p {
