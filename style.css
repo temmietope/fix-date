@@ -180,10 +180,6 @@ ul {
 .getting-started__action {
   padding: 10% 5%;
   box-sizing: border-box;
-  /* display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-flow: column; */
   display: grid;
   grid-template-rows: 3rem auto 2rem;
 }
@@ -335,7 +331,6 @@ footer {
     margin: 0;
   }
   .profile {
-    /* flex: 1; */
     width: 100%;
     height: 2.1875rem;
   }
@@ -420,7 +415,6 @@ footer {
     font-size: 0.75rem;
   }
   .activity__card__detail p:nth-child(2) {
-    font-weight: 300;
     line-height: 19px;
     font-size: 0.9375rem;
   }
@@ -439,5 +433,114 @@ footer {
   .card__description p {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    padding: 1rem 0.8rem;
+  }
+  .profile__avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+  .profile p {
+    font-size: 0.9rem;
+  }
+  .schedule h1 {
+    font-size: 1.25rem;
+  }
+  .schedule button {
+    width: 6.75rem;
+    font-size: 0.5rem;
+  }
+  .cards {
+    height: 11.5rem;
+  }
+  .card {
+    height: 5rem;
+  }
+  .card__description p {
+    font-size: 0.75rem;
+  }
+  .card__button {
+    font-size: 0.65rem;
+  }
+  .getting-started {
+    height: 13.75rem;
+  }
+  .getting-started .getting-started__header h3 {
+    font-size: 0.9rem;
+    line-height: 1.05rem;
+  }
+  .getting-started .getting-started__header p {
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+  }
+  .getting-started__action__image {
+    height: 2rem;
+    width: 2rem;
+  }
+  .getting-started__action h5 {
+    font-size: 0.75rem;
+  }
+
+  .getting-started__action p {
+    font-size: 0.75rem;
+  }
+  .getting-started__action p img {
+    margin-left: 0.4rem;
+    width: 0.75rem;
+  }
+  .activity__card {
+    height: 7rem;
+    margin-bottom: 0.7rem;
+  }
+  .activity__card h2 {
+    font-size: 0.9rem;
+  }
+  .activity__card__detail p {
+    font-size: 0.65rem;
+  }
+  .activity__card__detail p:nth-child(2) {
+    line-height: 19px;
+    font-size: 0.7375rem;
+  }
+  footer {
+    height: 4rem;
+  }
+  .footer__wrapper {
+    padding: 1rem;
+  }
+  .footer__wrapper li img {
+    height: 1rem;
+    width: 1rem;
+  }
+  .footer__wrapper li p {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .cards {
+    height: 13.5rem;
+  }
+  .card {
+    height: 6.5rem;
+  }
+  .card__description p {
+    font-size: 0.65rem;
+  }
+  .card__button {
+    font-size: 0.55rem;
+  }
+}
+
+@media only screen and (max-width: 210px) {
+  .schedule h1 {
+    font-size: 1rem;
+  }
+  .schedule button {
+    width: 5rem;
   }
 }
