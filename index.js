@@ -3,6 +3,8 @@ const card = document.querySelector('.card--orange')
 const modal = document.querySelector('.modal')
 const close = document.querySelectorAll('.close-modal')
 const modalBody = document.querySelector('.modal__body')
+const modalHeader = document.querySelector('.modal__header')
+
 const lightBox = document.querySelector('.lightbox')
 const body = document.body
 
@@ -16,12 +18,22 @@ const openModal = () => {
 		width: window.getComputedStyle(card).width,
 		height: window.getComputedStyle(card).height
   }
-  console.log(position, size)
+  offset = card.offsetHeight
+  console.log(position.top)
+  console.log(card.offsetHeight)
+
+  modalHeader.style.position = "absolute";
+	// modalHeader.style.top = position.top + 'px';
+  modalHeader.style.height = size.height;
+  modalHeader.style.transform= `translate(0, -2rem)`;
 }
 const closeModal = () => {
   if(modal.classList.contains('open')){
+  modalHeader.style.transform= `translate(0, 0)`;
+
   modal.classList.remove('open')
   body.classList.remove('no-scroll')
+
 
   }
   // if (modal.style.display === 'block') {
