@@ -495,6 +495,15 @@ footer {
 } */
 
 
+.modal {
+  width: 400px;
+  display: flex;
+}
+
+.modal__wrapper{
+  align-items: center;
+  justify-content: center;
+}
 
 .modal__header {
   height: 5.5rem;
