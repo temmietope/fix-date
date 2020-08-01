@@ -28,24 +28,15 @@
 //   item.addEventListener('click', closeModal)
 // })
 
-
-
-
-
-
-
-
-
-
 //Setup
 let fsm = document.createElement('div')
 fsm.setAttribute('id', 'fsm_actual')
 document.body.appendChild(fsm)
 let card = document.querySelector('.card__animated')
-let fsmActual = document.querySelector('#fsm_actual')
-fsmActual.style.position = 'absolute'
-let paragraph = document.querySelector(".card__description__paragraph")
-let cardButton = document.querySelector("card__button_text")
+let modal = document.querySelector('#fsm_actual')
+modal.style.position = 'fixed'
+let paragraph = document.querySelector('.card__description__paragraph')
+let cardButton = document.querySelector('card__button_text')
 
 let position = {}
 let size = {}
@@ -59,35 +50,110 @@ let openModal = function (event) {
     height: window.getComputedStyle(target).height,
   }
 
-  fsmActual.style.position = 'absolute'
-  fsmActual.style.top = position.top + 'px'
-  fsmActual.style.left = position.left + 'px'
-  fsmActual.style.height = size.height
-  fsmActual.style.width = size.width
-  fsmActual.style.margin = target.style.margin
+  // modal.style.position = 'absolute'
+  // modal.style.top = position.top + 'px'
+  // modal.style.left = position.left + 'px'
+  // modal.style.height = size.height
+  // modal.style.width = size.width
+  // modal.style.margin = target.style.margin
 
-  
-
+  modal.style.position = 'fixed'
+  modal.style.top = position.top + 'px'
+  modal.style.left = position.left + 'px'
+  modal.style.height = size.height
+  modal.style.width = size.width
 
   setTimeout(function () {
-    fsmActual.innerHTML = target.innerHTML
+    {
+      /* <div class="modal__header">
+<h3>Today's Meals</h3>
+<button class="modal__close close-modal">
+  <img src="./assets/images/cancel.png" alt="close" />
+</button>
+</div> */
+    }
+
+    let modalHeader = document.createElement('div')
+    fsm.setAttribute('id', 'fsm_actual')
+    document.body.appendChild(fsm)
+
+    modal.innerHTML = `<div class="modal__header">
+    <h3>Today's Meals</h3>
+    <button class="modal__close close-modal">
+      <img src="./assets/images/cancel.png" alt="close" />
+    </button>
+    </div>
+    <ul class="modal__list">
+    <li>
+      <img src="./assets/images/akara.png" alt="food-image" />
+      <div class="modal__list__food">
+        <h6>Akara and Pap</h6>
+        <p>Cardohydrate</p>
+      </div>
+    </li>
+    <li>
+      <img src="./assets/images/jollof.png" alt="food-image" />
+      <div class="modal__list__food">
+        <h6>Jollof Rice</h6>
+        <p>Protein</p>
+      </div>
+    </li>
+    <li>
+      <a href="#img1"
+        ><img src="./assets/images/gastonton.png" alt="food-image"
+      /></a>
+      <div class="modal__list__food">
+        <h6>Gastonton</h6>
+        <p>Cardohydrate</p>
+      </div>
+    </li>
+    <li>
+      <img src="./assets/images/port.png" alt="food-image" />
+      <div class="modal__list__food">
+        <h6>Port Domenic</h6>
+        <p>Cardohydrate</p>
+      </div>
+    </li>
+    <li>
+      <img src="./assets/images/carle.png" alt="food-image" />
+      <div class="modal__list__food">
+        <h6>Carleeville</h6>
+        <p>Fat & Oils</p>
+      </div>
+    </li>
+    <li>
+      <img src="./assets/images/south.png" alt="food-image" />
+      <div class="modal__list__food">
+        <h6>South Chesleyton</h6>
+        <p>Vegetable</p>
+      </div>
+    </li>
+    <div class="modal__footer">
+      <img
+        src="./assets/images/home-indicator.png"
+        alt="modal-bottom"
+      />
+    </div>
+  </ul>
+    `
     let classes = target.classList.value.split(' ')
     for (let i = 0; i < classes.length; i++) {
-      fsmActual.classList.add(classes[i])
+      modal.classList.add(classes[i])
     }
-    fsmActual.classList.add('growing')
-    fsmActual.style.height = '100vh'
-    fsmActual.style.width = '100vw'
-    fsmActual.style.top = '0'
-    fsmActual.style.left = '0'
-    fsmActual.style.margin = '0'
-  fsmActual.style.background= "rgba(255, 255, 255, 0.8)"
+    modal.classList.add('growing')
+    modal.style.height = '100%'
+    modal.style.width = '100%'
+    modal.style.top = '0'
+    modal.style.left = '0'
+    modal.style.right = '0'
+    // modal.style.margin = '0'
+    modal.style.background = 'rgba(255, 255, 255, 0.8)'
   }, 1)
 
   setTimeout(function () {
-    fsmActual.classList.remove('growing')
-    fsmActual.classList.add('full-screen')
-  }, 1000)
+    modal.classList.remove('growing')
+    modal.classList.add('full-screen')
+  }, 500)
 }
 
 let closeModal = function (event) {
@@ -108,8 +174,8 @@ let closeModal = function (event) {
       classList.remove(classList.item(0))
     }
     target.style = ''
-  }, 1000)
+  }, 500)
 }
 
 card.addEventListener('click', openModal)
-fsmActual.addEventListener('click', closeModal)
+modal.addEventListener('click', closeModal)
