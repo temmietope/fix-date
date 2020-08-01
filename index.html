@@ -109,11 +109,11 @@
 
       <!-- Modal -->
       <div class="modal">
-        <div class="modal__wrapper">
+        <div class="modal__wrapper close-modal">
           <div class="modal__body">
             <div class="modal__header">
               <h3>Today's Meals</h3>
-              <button class="modal__close">
+              <button class="modal__close close-modal">
                 <img src="./assets/images/cancel.png" alt="close" />
               </button>
             </div>
@@ -133,7 +133,9 @@
                 </div>
               </li>
               <li>
-                <img src="./assets/images/gastonton.png" alt="food-image" />
+                <a href="#img1"
+                  ><img src="./assets/images/gastonton.png" alt="food-image"
+                /></a>
                 <div class="modal__list__food">
                   <h6>Gastonton</h6>
                   <p>Cardohydrate</p>
@@ -168,6 +170,12 @@
               </div>
             </ul>
           </div>
+
+          <a href="#_" class="lightbox" id="img1">
+            <div class="lightbox__image">
+              <img src="./assets/images/lightbox.png" alt="food-image" />
+            </div>
+          </a>
         </div>
       </div>
     </div>
