@@ -375,7 +375,7 @@ footer {
   visibility: hidden;
 
   transform-origin: 0 0;
-  transition: transform 400ms ease, opacity 200ms opacity 200ms linear 200ms;
+  /* transition: transform 100ms ease, vis 200ms opacity 200ms linear 200ms; */
 }
 .modal.open {
   /* display: block; */
@@ -416,7 +416,7 @@ footer {
   visibility: hidden;
   opacity: 0;
   transition: opacity 2s visibility 2s;
-  transition: all 1s;
+  /* transition: all 1s; */
   /* animation: 2s slide-up; */
 }
 .modal.open .modal__header {
@@ -459,7 +459,7 @@ footer {
   height: inherit;
   visibility: hidden;
   opacity: 0;
-  animation: 2s slide-up ease-in-out;
+  animation: 3s slide-up ease-in-out;
   transition: all 1s;
 
   /* transform-origin: 0 0; */
@@ -472,7 +472,7 @@ footer {
   flex-flow: column;
   visibility: visible;
   opacity: 1;
-  animation: 2s slide-up ease-in-out;
+  animation: 2s slide-up;
 
   /* transition-delay: 2s; */
 }
