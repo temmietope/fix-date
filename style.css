@@ -505,16 +505,42 @@ footer {
   align-items: center;
 }
 
-.lightbox img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .lightbox:target {
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  animation: zoomIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale (0.7);
+  }
+  to {
+    transform: scale (1);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 @media only screen and (max-width: 900px) {
