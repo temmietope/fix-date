@@ -210,7 +210,7 @@ ul {
 }
 
 .getting-started__action {
-  padding: 10% 5%;
+  padding: 6% 5%;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 3rem auto 2rem;
@@ -369,18 +369,14 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  /* display: none; */
   overflow: auto;
-
   backface-visibility: hidden;
   transform: scale(0);
   opacity: 0;
-
   transform-origin: 0 0;
   transition: transform 400ms ease, opacity 200ms linear 200ms;
 }
 .modal.open {
-  /* display: block; */
   transform: scale(1);
   opacity: 1;
 }
@@ -388,10 +384,8 @@ footer {
 .modal__wrapper {
   background-color: rgba(0, 0, 0, 0.9);
   margin: 0 20%;
-  /* height: 100%; */
   padding-top: 10.0625rem;
   position: relative;
-  /* overflow-y: scroll; */
 }
 
 .modal__body {
