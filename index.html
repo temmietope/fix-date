@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="container">
       <div class="profile">
@@ -36,7 +37,7 @@
           <div class="card__description">
             <p>View your meals for the week.</p>
           </div>
-          <div class="card__button">
+          <div class="card__button card__checkfood">
             <p>Check ‘em</p>
           </div>
         </div>
@@ -86,25 +87,91 @@
         </div>
       </section>
       <footer>
-          <ul class="footer__wrapper">
-            <li>
-                <img src="./assets/images/schedule.png" alt="icon"/>
-                <p>Schedule</p>
-            </li>
-            <li>
-                <img src="./assets/images/history.png" alt="icon"/>
-                <p>History</p>
-            </li><li>
-                <img src="./assets/images/notification.png" alt="icon"/>
-                <p>Notification</p>
-            </li><li>
-                <img src="./assets/images/chat.png" alt="icon"/>
-                <p>Chat</p>
-            </li>
+        <ul class="footer__wrapper">
+          <li>
+            <img src="./assets/images/schedule.png" alt="icon" />
+            <p>Schedule</p>
+          </li>
+          <li>
+            <img src="./assets/images/history.png" alt="icon" />
+            <p>History</p>
+          </li>
+          <li>
+            <img src="./assets/images/notification.png" alt="icon" />
+            <p>Notification</p>
+          </li>
+          <li>
+            <img src="./assets/images/chat.png" alt="icon" />
+            <p>Chat</p>
+          </li>
+        </ul>
+      </footer>
 
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal__wrapper">
+          <div class="modal__body">
+            <div class="modal__header">
+              <h3>Today's Meals</h3>
+              <button class="modal__close">
+                <img src="./assets/images/cancel.png" alt="close" />
+              </button>
+            </div>
+            <ul class="modal__list">
+              <li>
+                <img src="./assets/images/akara.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>Akara and Pap</h6>
+                  <p>Cardohydrate</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/images/jollof.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>Jollof Rice</h6>
+                  <p>Protein</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/images/gastonton.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>Gastonton</h6>
+                  <p>Cardohydrate</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/images/port.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>Port Domenic</h6>
+                  <p>Cardohydrate</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/images/carle.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>Carleeville</h6>
+                  <p>Fat & Oils</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/images/south.png" alt="food-image" />
+                <div class="modal__list__food">
+                  <h6>South Chesleyton</h6>
+                  <p>Vegetable</p>
+                </div>
+              </li>
+              <div class="modal__footer">
+                <img
+                  src="./assets/images/home-indicator.png"
+                  alt="modal-bottom"
+                />
+              </div>
             </ul>
           </div>
-      </footer>
+        </div>
+      </div>
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>

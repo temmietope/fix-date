@@ -2,12 +2,14 @@
   font-family: Cerebri Sans;
   src: url('./assets/fonts/CerebriSans-Regular.ttf');
 }
+
 body {
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: 'PT Serif', serif;
 }
+
 h1,
 h2,
 h3,
@@ -19,13 +21,16 @@ ul {
   padding: 0;
   margin: 0;
 }
+
 .container {
   margin: 0 20%;
   background-color: #f9fefb;
   padding: 1.4rem 2.5rem;
   box-sizing: border-box;
   position: relative;
+  box-shadow: 0px 3px 6px #2c28281c;
 }
+
 .profile {
   width: 100%;
   height: 3.185rem;
@@ -33,6 +38,7 @@ ul {
   justify-content: flex-start;
   align-items: center;
 }
+
 .profile__avatar {
   width: 3.1875rem;
   height: 3.1875rem;
@@ -40,12 +46,14 @@ ul {
   border-radius: 50%;
   margin-right: 3%;
 }
+
 .profile__avatar img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
+
 .profile p {
   font-size: 1.5rem;
   color: #121212;
@@ -60,12 +68,14 @@ ul {
   height: 4rem;
   padding: 1.2rem 0;
 }
+
 .schedule h1 {
   color: #121212;
   font-size: 2.3rem;
   font-weight: 700;
   line-height: 37px;
 }
+
 .schedule button {
   outline: none;
   border: 0;
@@ -78,7 +88,9 @@ ul {
   color: #e78f00;
   border: 1px solid #e78f00;
   font-family: Cerebri Sans;
+  cursor: pointer;
 }
+
 .cards {
   height: 12.25rem;
   width: 100%;
@@ -87,6 +99,7 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
 .card {
   height: 5.5rem;
   width: 100%;
@@ -95,18 +108,23 @@ ul {
   border-radius: 6px;
   font-family: Cerebri Sans;
 }
+
 .card--green {
   background-color: rgba(0, 194, 103, 0.1);
 }
+
 .card--green .card__button {
   background-color: #00c267;
 }
+
 .card--orange {
   background-color: #f9f5e1;
 }
+
 .card--orange .card__button {
   background-color: #ffbe56;
 }
+
 .card__button {
   display: flex;
   justify-content: center;
@@ -118,12 +136,15 @@ ul {
   font-size: 1rem;
   border-radius: 0 6px 6px 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
+
 .card--green .card__button p:nth-child(1) {
   text-decoration: line-through;
   font-weight: lighter;
   margin-bottom: 3%;
 }
+
 .card__description {
   padding: 1rem;
   box-sizing: border-box;
@@ -131,6 +152,7 @@ ul {
   justify-content: center;
   flex-flow: column;
 }
+
 .card__description p {
   color: #1b1b1b;
   font-size: 1.3rem;
@@ -140,6 +162,7 @@ ul {
   padding: 0;
   box-sizing: border-box;
 }
+
 .getting-started {
   width: 100%;
   height: 20.75rem;
@@ -152,18 +175,21 @@ ul {
   flex-flow: column;
   justify-content: space-between;
 }
+
 .getting-started .getting-started__header {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   height: 20%;
 }
+
 .getting-started .getting-started__header h3 {
   color: #121212;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5rem;
 }
+
 .getting-started .getting-started__header p {
   color: #383838;
   font-family: Cerebri Sans;
@@ -171,37 +197,44 @@ ul {
   font-size: 1.1rem;
   line-height: 1.1rem;
 }
+
 .getting-started__actions {
   display: grid;
   grid-template-columns: 47% 47%;
   justify-content: space-between;
   height: 70%;
 }
+
 .getting-started__action {
   padding: 10% 5%;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 3rem auto 2rem;
 }
+
 .getting-started__action__image {
   width: 3rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
+
 .action--call .getting-started__action__image {
   background-color: rgba(190, 164, 255, 0.7);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
+
 .action--play .getting-started__action__image {
   background-color: rgba(255, 146, 101, 0.7);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
+
 .getting-started__action__image img {
   width: 40%;
   height: 40%;
   object-fit: contain;
 }
+
 .getting-started__action h5 {
   color: #383838;
   font-family: Cerebri Sans;
@@ -212,25 +245,32 @@ ul {
   align-items: center;
   font-size: 1.1rem;
 }
+
 .getting-started__action p {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
+  cursor: pointer;
 }
+
 .getting-started__action span {
   font-family: Cerebri Sans;
   text-decoration: underline;
 }
+
 .action--call span {
   color: #8a5cff;
 }
+
 .action--play span {
   color: #ff682a;
 }
+
 .getting-started__action p img {
   margin-left: 1rem;
   width: 1rem;
 }
+
 .activity__card {
   height: 9rem;
   display: flex;
@@ -238,6 +278,7 @@ ul {
   flex-flow: column;
   margin-bottom: 1rem;
 }
+
 .activity__card h2 {
   color: #00c267;
   font-family: 'PT Serif';
@@ -245,6 +286,7 @@ ul {
   line-height: 22px;
   font-weight: 300;
 }
+
 .activity__card__detail {
   height: 70%;
   display: grid;
@@ -252,10 +294,12 @@ ul {
   align-items: center;
   width: 100%;
 }
+
 .activity__card__detail p {
   font-family: 'Cerebri Sans';
   font-size: 0.9rem;
 }
+
 .activity__card__detail p:nth-child(2) {
   height: 100%;
   width: 100%;
@@ -271,14 +315,15 @@ ul {
   padding: 5%;
   box-sizing: border-box;
 }
+
 footer {
-  position: absolute;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 5rem;
 }
+
 .footer__wrapper {
   background-color: rgba(244, 244, 244, 0.75);
   height: 100%;
@@ -289,6 +334,7 @@ footer {
   padding: 1rem 2.5rem;
   box-sizing: border-box;
 }
+
 .footer__wrapper li {
   list-style: none;
   display: flex;
@@ -296,11 +342,14 @@ footer {
   align-items: center;
   flex-flow: column;
   height: 100%;
+  cursor: pointer;
 }
+
 .footer__wrapper li img {
   width: 1.4rem;
   height: 1.4rem;
 }
+
 .footer__wrapper li p {
   color: #303030;
   font-family: Cerebri Sans;
@@ -309,15 +358,137 @@ footer {
   line-height: 22px;
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.modal__wrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 20%;
+  height: 100%;
+  padding-top: 10.0625rem;
+  overflow-y: scroll;
+}
+
+.modal__body {
+  /* position: ; */
+  /* border-radius: 20px 20px 0 0; */
+}
+
+.modal__header {
+  height: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #121212;
+  font-family: 'PT Serif';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 20px 20px 0 0;
+  background-color: #f9f5e1;
+  box-sizing: border-box;
+}
+
+.modal__header h3 {
+  padding: 2.5rem;
+  box-sizing: border-box;
+  width: 75%;
+  height: 100%;
+}
+
+.modal__header button {
+  width: 25%;
+  border: none;
+  outline: none;
+  height: 100%;
+  border-radius: 0 20px 0 0;
+  background-color: #ffbe56;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.modal__header button img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.modal__list {
+  padding: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: inherit;
+  display: flex;
+  flex-flow: column;
+}
+
+.modal__list li {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.9rem;
+}
+
+.modal__list li img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.75rem;
+}
+
+.modal__list__food {
+  display: flex;
+  flex-flow: column;
+}
+
+.modal__list__food h6 {
+  color: #303030;
+  font-family: Cerebri Sans;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.modal__list__food p {
+  color: #6c6c6c;
+  font-family: Cerebri Sans;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.modal__footer {
+  justify-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 3.125rem;
+  margin-bottom: 5%;
+}
+
+.modal__footer img {
+}
+
 @media only screen and (max-width: 900px) {
   .container,
-  .footer__wrapper {
+  .footer__wrapper,
+  .modal__wrapper {
     margin: 0 10%;
   }
 }
+
 @media only screen and (max-width: 790px) {
   .container,
-  .footer__wrapper {
+  .footer__wrapper,
+  .modal__wrapper {
     margin: 0 5%;
   }
 }
@@ -326,71 +497,91 @@ footer {
   .container {
     padding: 1rem 1.75rem;
   }
+
   .container,
-  .footer__wrapper {
+  .footer__wrapper,
+  .modal__wrapper {
     margin: 0;
+    box-shadow: 0;
   }
+
   .profile {
     width: 100%;
     height: 2.1875rem;
   }
+
   .profile__avatar {
     width: 2.1875rem;
     height: 2.1875rem;
   }
+
   .profile p {
     font-size: 1.0625rem;
   }
+
   .schedule {
     height: 2.3125rem;
   }
+
   .schedule h1 {
     font-size: 1.75rem;
   }
+
   .schedule button {
     height: 1.5625rem;
     width: 8.75rem;
     border-radius: 13px;
     font-size: 0.75rem;
   }
+
   .cards {
     height: 9.25rem;
   }
+
   .card {
     height: 4rem;
   }
+
   .card__description {
     padding: 0.5rem;
   }
+
   .card__description p {
     font-size: 1rem;
     line-height: 1.25rem;
   }
+
   .card__button {
     font-size: 0.875rem;
     padding: 0.5rem;
   }
+
   .getting-started {
     height: 15.75rem;
   }
+
   .getting-started .getting-started__header h3 {
     font-size: 1.0625rem;
     line-height: 1.25rem;
   }
+
   .getting-started .getting-started__header p {
     font-size: 0.875rem;
     line-height: 1rem;
   }
+
   .getting-started__action {
     padding: 10% 5%;
     display: flex;
     justify-content: space-between;
     flex-flow: column;
   }
+
   .getting-started__action__image {
     height: 2.5rem;
     width: 2.5rem;
   }
+
   .getting-started__action h5 {
     font-size: 0.875rem;
     height: auto;
@@ -411,21 +602,71 @@ footer {
     font-size: 1.0625rem;
     line-height: 22px;
   }
+
   .activity__card__detail p {
     font-size: 0.75rem;
   }
+
   .activity__card__detail p:nth-child(2) {
     line-height: 19px;
     font-size: 0.9375rem;
   }
+
   footer {
     height: 4.625rem;
   }
+
   .footer__wrapper li img {
     height: 1.25rem;
   }
+
   .footer__wrapper li p {
     font-size: 0.75rem;
+  }
+
+  .modal__wrapper {
+    padding-top: 8.0625rem;
+  }
+
+  .modal__header {
+    height: 5.4375rem;
+    font-size: 1.25rem;
+  }
+
+  .modal__header h3 {
+    padding: 1.875rem;
+  }
+
+  .modal__header button img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+
+  .modal__list {
+    padding: 1.875rem;
+  }
+
+  .modal__list li {
+    height: 3.75rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .modal__list li img {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 1.25rem;
+  }
+
+  .modal__list__food h6 {
+    font-size: 1.125rem;
+  }
+
+  .modal__list__food p {
+    font-size: 0.9375rem;
+  }
+
+  .modal__footer {
+    height: 2.125rem;
   }
 }
 
@@ -440,47 +681,60 @@ footer {
   .container {
     padding: 1rem 0.8rem;
   }
+
   .profile__avatar {
     width: 2rem;
     height: 2rem;
   }
+
   .profile p {
     font-size: 0.9rem;
   }
+
   .schedule h1 {
     font-size: 1.25rem;
   }
+
   .schedule button {
     width: 6.75rem;
     font-size: 0.5rem;
   }
+
   .cards {
     height: 11.5rem;
   }
+
   .card {
     height: 5rem;
   }
+
   .card__description p {
     font-size: 0.75rem;
   }
+
   .card__button {
     font-size: 0.65rem;
   }
+
   .getting-started {
     height: 13.75rem;
   }
+
   .getting-started .getting-started__header h3 {
     font-size: 0.9rem;
     line-height: 1.05rem;
   }
+
   .getting-started .getting-started__header p {
     font-size: 0.75rem;
     line-height: 0.9rem;
   }
+
   .getting-started__action__image {
     height: 2rem;
     width: 2rem;
   }
+
   .getting-started__action h5 {
     font-size: 0.75rem;
   }
@@ -488,34 +742,43 @@ footer {
   .getting-started__action p {
     font-size: 0.75rem;
   }
+
   .getting-started__action p img {
     margin-left: 0.4rem;
     width: 0.75rem;
   }
+
   .activity__card {
     height: 7rem;
     margin-bottom: 0.7rem;
   }
+
   .activity__card h2 {
     font-size: 0.9rem;
   }
+
   .activity__card__detail p {
     font-size: 0.65rem;
   }
+
   .activity__card__detail p:nth-child(2) {
     line-height: 19px;
     font-size: 0.7375rem;
   }
+
   footer {
     height: 4rem;
   }
+
   .footer__wrapper {
     padding: 1rem;
   }
+
   .footer__wrapper li img {
     height: 1rem;
     width: 1rem;
   }
+
   .footer__wrapper li p {
     font-size: 0.5rem;
   }
@@ -525,12 +788,15 @@ footer {
   .cards {
     height: 13.5rem;
   }
+
   .card {
     height: 6.5rem;
   }
+
   .card__description p {
     font-size: 0.65rem;
   }
+
   .card__button {
     font-size: 0.55rem;
   }
@@ -540,6 +806,7 @@ footer {
   .schedule h1 {
     font-size: 1rem;
   }
+
   .schedule button {
     width: 5rem;
   }
