@@ -102,7 +102,6 @@ ul {
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid;
 }
 
 .card {
@@ -363,30 +362,35 @@ footer {
   line-height: 22px;
 }
 
-/* .modal {
+.modal {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.8);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  /* display: none; */
   overflow: auto;
-  
+  opacity: 0;
+  visibility: hidden;
+
   transform-origin: 0 0;
-  transition: transform 400ms ease, opacity 200ms linear 200ms;
+  transition: transform 400ms ease, opacity 200ms opacity 200ms linear 200ms;
 }
 .modal.open {
-  display: block;
+  /* display: block; */
   transform: scale(1);
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal__wrapper {
   background-color: rgba(0, 0, 0, 0.9);
   margin: 0 20%;
+  /* height: 100%; */
   padding-top: 10.0625rem;
   position: relative;
+  /* overflow-y: scroll; */
 }
 
 .modal__body {
@@ -395,13 +399,12 @@ footer {
   height: initial;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.9);
-  
 }
 
 .modal__header {
   height: 5.5rem;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   color: #121212;
   font-family: 'PT Serif';
   font-size: 1.5rem;
@@ -410,6 +413,18 @@ footer {
   border-radius: 20px 20px 0 0;
   background-color: #f9f5e1;
   box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s visibility 2s;
+  transition: all 1s;
+  /* animation: 2s slide-up; */
+}
+.modal.open .modal__header {
+  display: flex;
+  justify-content: space-between;
+  visibility: visible;
+  opacity: 1;
+  /* animation: 2s slide-up; */
 }
 
 .modal__header h3 {
@@ -442,10 +457,25 @@ footer {
   background-color: #fff;
   box-sizing: border-box;
   height: inherit;
-  display: flex;
-  flex-flow: column;
+  visibility: hidden;
+  opacity: 0;
+  animation: 2s slide-up ease-in-out;
+  transition: all 1s;
+
+  /* transform-origin: 0 0; */
+  /* display: flex;
+  flex-flow: column; */
 }
 
+.modal.open .modal__list {
+  display: flex;
+  flex-flow: column;
+  visibility: visible;
+  opacity: 1;
+  animation: 2s slide-up ease-in-out;
+
+  /* transition-delay: 2s; */
+}
 .modal__list li {
   height: 4rem;
   width: 100%;
@@ -492,108 +522,7 @@ footer {
 }
 
 .modal__footer img {
-} */
-
-
-/* .contain {
-  background-color: rgba(0, 0, 0, 0.9);
-  margin: 0 20%;
-  padding-top: 10.0625rem;
-  position: relative;
-} */
-.modal__header {
-  height: 5.5rem;
-  display: flex;
-  justify-content: space-between;
-  color: #121212;
-  font-family: 'PT Serif';
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 26px;
-  border-radius: 20px 20px 0 0;
-  background-color: #f9f5e1;
-  box-sizing: border-box;
 }
-
-.modal__header h3 {
-  padding: 2.5rem;
-  box-sizing: border-box;
-  width: 75%;
-  height: 100%;
-  text-align: left;
-}
-
-.modal__header button {
-  width: 25%;
-  border: none;
-  outline: none;
-  height: 100%;
-  border-radius: 0 20px 0 0;
-  background-color: #ffbe56;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.modal__header button img {
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
-.modal__list {
-  padding: 2rem;
-  background-color: #fff;
-  box-sizing: border-box;
-  height: inherit;
-  display: flex;
-  flex-flow: column;
-}
-
-.modal__list li {
-  height: 4rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.9rem;
-}
-
-.modal__list li img {
-  width: 4rem;
-  height: 4rem;
-  margin-right: 1.75rem;
-}
-
-.modal__list__food {
-  display: flex;
-  flex-flow: column;
-}
-
-.modal__list__food h6 {
-  color: #303030;
-  font-family: Cerebri Sans;
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 24px;
-}
-
-.modal__list__food p {
-  color: #6c6c6c;
-  font-family: Cerebri Sans;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 24px;
-}
-
-.modal__footer {
-  justify-self: flex-end;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 3.125rem;
-  margin-bottom: 5%;
-}
-
 
 .lightbox {
   display: none;
@@ -635,79 +564,45 @@ footer {
   height: 5.5rem;
 }
 
-.modal-container {
+.modal-text {
   height: 0;
   width: 0;
   margin: 0;
 }
-.modal-container span {
+.modal-text span {
   opacity: 0;
   transition: 1s;
 }
 
-.growing.modal__header{
-
+.growing .modal-text span {
+  height: auto;
+  margin: 0;
+  opacity: 0;
+  transition-delay: 0.5s;
 }
-/* .growing .modal-container span {
-    height: auto;
-    margin: 0;
-    opacity: 0;
-    transition-delay: 0.5s;
-} */
 
 .full-screen {
-  /* height: 100vh; */
-  /* z-index: 100; */
-  /* margin: 0; */
+  height: 100vh;
+  z-index: 100;
+  margin: 0;
   border-radius: 0;
-  /* margin: 0 20%; */
-  /* padding: 0 20%;; */
-  /* padding-top: 10.0625rem; */
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  /* background-color: red !important; */
-  /* margin: 0 20%; */
-  /* padding: 0 20%;
-  padding-top: 10.0625rem; */
-  /* padding: 0 20%;
-  padding-top: 10.0625rem;
-  height: 100%;
-  width: 100%; */
-
-  /* width: 100%;
-  height: 100%; */
-  /* margin: 0; */
-  /* position: relative; */
-  /* box-sizing: border-box;
-  overflow: auto; */
 }
-
-.card__animated.full-screen {
-  /* display: none; */
-  /* padding: 0 20%; */
-}
-.full-screen.card__animated .modal-container {
-  /* height: auto;
-  width: auto; */
-  /* height: 40rem;
-  width: 30rem; */
+.full-screen .modal-text {
+  height: auto;
+  width: auto;
   margin: inital;
-  z-index: 999;
-  background-color: blue !important;
-  /* background-color: rgba(0, 0, 0, 0.9); */
-  /* height: 100vh; */
 }
 
-.full-screen .modal-container span {
+.full-screen .modal-text span {
   transition-delay: 0.5s;
   opacity: 1;
-  background-color: blue !important;
 }
 
-.shrinking .modal-container span {
+.shrinking .modal-text span {
   transition-delay: 0s;
-  transition: 0.1s;
+  transition: 0.5s;
   opacity: 0;
-  /* display: block; */
+  display: block;
 }
 
 @keyframes enlarge {
@@ -732,6 +627,18 @@ footer {
   }
   100% {
     transform: scale(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
   }
 }
 

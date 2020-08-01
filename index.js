@@ -1,192 +1,47 @@
-// const cardButton = document.querySelector('.card__checkfood')
-// const modal = document.querySelector('.modal')
-// const close = document.querySelectorAll(".close-modal")
-// const modalBody = document.querySelector('.modal__body')
-// const lightBox = document.querySelector(".lightbox")
-// const body = document.body
+const cardButton = document.querySelector('.card__checkfood')
+const card = document.querySelector('.card--orange')
+const modal = document.querySelector('.modal')
+const close = document.querySelectorAll('.close-modal')
+const modalBody = document.querySelector('.modal__body')
+const lightBox = document.querySelector('.lightbox')
+const body = document.body
 
-// const openModal = () => {
-//   modal.style.display = 'block'
-//   body.classList.add('no-scroll')
-// }
-// const closeModal = () => {
-//   if (modal.style.display === 'block') {
-//     modal.style.display = 'none'
-//     body.classList.remove('no-scroll')
-//   }
-// }
-// cardButton.addEventListener('click', openModal)
+const openModal = () => {
+  // modal.style.display = 'block'
+  modal.classList.add('open')
 
-// modalBody.addEventListener('click', (e) => {
-//   e.stopPropagation()
-// })
-// lightBox.addEventListener('click', (e) => {
-//   e.stopPropagation()
-// })
-
-// close.forEach(item => {
-//   item.addEventListener('click', closeModal)
-// })
-
-//Setup
-let fsm = document.createElement('div')
-fsm.setAttribute('class', 'fsm_actual')
-document.body.appendChild(fsm)
-let contain = document.createElement('div')
-contain.setAttribute('class', 'modal_div')
-let card = document.querySelector('.card__animated')
-let modal = document.querySelector('.fsm_actual')
-modal.style.position = 'fixed'
-let paragraph = document.querySelector('.card__description__paragraph')
-let cardButton = document.querySelector('card__button_text')
-
-modal.appendChild(contain)
-
-let position = {}
-let size = {}
-
-//modal action stuffs
-let openModal = function (event) {
-  let target = event.currentTarget
-  position = target.getBoundingClientRect()
-  size = {
-    width: window.getComputedStyle(target).width,
-    height: window.getComputedStyle(target).height,
+  body.classList.add('no-scroll')
+  position = card.getBoundingClientRect();
+	size = {
+		width: window.getComputedStyle(card).width,
+		height: window.getComputedStyle(card).height
   }
-
-  // modal.style.position = 'absolute'
-  // modal.style.top = position.top + 'px'
-  // modal.style.left = position.left + 'px'
-  // modal.style.height = size.height
-  // modal.style.width = size.width
-  // modal.style.margin = target.style.margin
-
-  modal.style.position = 'fixed'
-  modal.style.top = position.top + 'px'
-  modal.style.left = position.left + 'px'
-  modal.style.height = size.height
-  modal.style.width = size.width
-
-  // contain.style.background = 'rgba(0, 0, 0, 0.9)'
-  contain.style.background = 'red'
-
-  contain.style.margin = '0 20%'
-  contain.style.paddingTop = '10.0625rem'
-  contain.style.position = 'relative'
-
-  setTimeout(function () {
-    contain.innerHTML = `<div class="modal__header">
-    <h3>Today's Meals</h3>
-    <button class="modal__close close-modal">
-      <img src="./assets/images/cancel.png" alt="close" />
-    </button>
-    </div>
-    <ul class="modal__list">
-    <li>
-      <img src="./assets/images/akara.png" alt="food-image" />
-      <div class="modal__list__food">
-        <h6>Akara and Pap</h6>
-        <p>Cardohydrate</p>
-      </div>
-    </li>
-    <li>
-      <img src="./assets/images/jollof.png" alt="food-image" />
-      <div class="modal__list__food">
-        <h6>Jollof Rice</h6>
-        <p>Protein</p>
-      </div>
-    </li>
-    <li>
-      <a href="#img1"
-        ><img src="./assets/images/gastonton.png" alt="food-image"
-      /></a>
-      <div class="modal__list__food">
-        <h6>Gastonton</h6>
-        <p>Cardohydrate</p>
-      </div>
-    </li>
-    <li>
-      <img src="./assets/images/port.png" alt="food-image" />
-      <div class="modal__list__food">
-        <h6>Port Domenic</h6>
-        <p>Cardohydrate</p>
-      </div>
-    </li>
-    <li>
-      <img src="./assets/images/carle.png" alt="food-image" />
-      <div class="modal__list__food">
-        <h6>Carleeville</h6>
-        <p>Fat & Oils</p>
-      </div>
-    </li>
-    <li>
-      <img src="./assets/images/south.png" alt="food-image" />
-      <div class="modal__list__food">
-        <h6>South Chesleyton</h6>
-        <p>Vegetable</p>
-      </div>
-    </li>
-    <div class="modal__footer">
-      <img
-        src="./assets/images/home-indicator.png"
-        alt="modal-bottom"
-      />
-    </div>
-  </ul>
-    `
-    let classes = target.classList.value.split(' ')
-    for (let i = 0; i < classes.length; i++) {
-      // modal.classList.add(classes[i])
-      contain.classList.add(classes[i])
-    }
-    // modal.classList.add('growing')
-    // modal.style.height = '100%'
-    // modal.style.width = '100%'
-    // modal.style.top = '0'
-    // modal.style.left = '0'
-    // modal.style.right = '0'
-    // modal.style.margin = '0'
-    // modal.style.background = 'rgba(255, 255, 255, 0.8)'
-    contain.classList.add('growing')
-    contain.style.height = '100%'
-    contain.style.width = '100%'
-    contain.style.top = '0'
-    contain.style.left = '0'
-    contain.style.right = '0'
-    contain.style.margin = '0'
-    contain.style.background = 'rgba(255, 255, 255, 0.8)'
-  }, 0.5)
-
-  setTimeout(function () {
-    // modal.classList.remove('growing')
-    // modal.classList.add('full-screen')
-    contain.classList.remove('growing')
-    contain.classList.add('full-screen')
-  }, 500)
+  console.log(position, size)
 }
+const closeModal = () => {
+  if(modal.classList.contains('open')){
+  modal.classList.remove('open')
+  body.classList.remove('no-scroll')
 
-let closeModal = function (event) {
-  let target = event.currentTarget
-
-  target.style.height = size.height
-  target.style.width = size.width
-  target.style.top = position.top + 'px'
-  target.style.left = position.left + 'px'
-  target.style.margin = '0'
-  target.classList.remove('full-screen')
-  target.classList.add('shrinking')
-  // contain.classList.remove('full-screen')
-  // contain.classList.add('shrinking')
-
-  setTimeout(function () {
-    while (target.secondChild) target.removeChild(target.secondChild)
-    let classList = target.classList
-    while (classList.length > 0) {
-      classList.remove(classList.item(0))
-    }
-    target.style = ''
-  }, 500)
+  }
+  // if (modal.style.display === 'block') {
+  //   modal.style.display = 'none'
+  //   body.classList.remove('no-scroll')
+  // }
 }
+cardButton.addEventListener('click', openModal)
 
-card.addEventListener('click', openModal)
-modal.addEventListener('click', closeModal)
+modalBody.addEventListener('click', (e) => {
+  e.stopPropagation()
+})
+lightBox.addEventListener('click', (e) => {
+  e.stopPropagation()
+})
+
+close.forEach((item) => {
+  item.addEventListener('click', closeModal)
+})
+
+var rect = card.getBoundingClientRect()
+// console.log(rect.top, rect.right, rect.bottom, rect.left);
+console.log(rect.left, rect.top)
