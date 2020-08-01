@@ -369,8 +369,20 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  /* display: none; */
   overflow: auto;
+
+  backface-visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+
+  transform-origin: 0 0;
+  transition: transform 400ms ease, opacity 200ms linear 200ms;
+}
+.modal.open {
+  /* display: block; */
+  transform: scale(1);
+  opacity: 1;
 }
 
 .modal__wrapper {
@@ -409,6 +421,7 @@ footer {
   box-sizing: border-box;
   width: 75%;
   height: 100%;
+  text-align: left;
 }
 
 .modal__header button {
