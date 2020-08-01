@@ -30,13 +30,17 @@
 
 //Setup
 let fsm = document.createElement('div')
-fsm.setAttribute('id', 'fsm_actual')
+fsm.setAttribute('class', 'fsm_actual')
 document.body.appendChild(fsm)
+let contain = document.createElement('div')
+contain.setAttribute('class', 'modal_div')
 let card = document.querySelector('.card__animated')
-let modal = document.querySelector('#fsm_actual')
+let modal = document.querySelector('.fsm_actual')
 modal.style.position = 'fixed'
 let paragraph = document.querySelector('.card__description__paragraph')
 let cardButton = document.querySelector('card__button_text')
+
+modal.appendChild(contain)
 
 let position = {}
 let size = {}
@@ -63,21 +67,15 @@ let openModal = function (event) {
   modal.style.height = size.height
   modal.style.width = size.width
 
+  // contain.style.background = 'rgba(0, 0, 0, 0.9)'
+  contain.style.background = 'red'
+
+  contain.style.margin = '0 20%'
+  contain.style.paddingTop = '10.0625rem'
+  contain.style.position = 'relative'
+
   setTimeout(function () {
-    {
-      /* <div class="modal__header">
-<h3>Today's Meals</h3>
-<button class="modal__close close-modal">
-  <img src="./assets/images/cancel.png" alt="close" />
-</button>
-</div> */
-    }
-
-    let modalHeader = document.createElement('div')
-    fsm.setAttribute('id', 'fsm_actual')
-    document.body.appendChild(fsm)
-
-    modal.innerHTML = `<div class="modal__header">
+    contain.innerHTML = `<div class="modal__header">
     <h3>Today's Meals</h3>
     <button class="modal__close close-modal">
       <img src="./assets/images/cancel.png" alt="close" />
@@ -138,21 +136,32 @@ let openModal = function (event) {
     `
     let classes = target.classList.value.split(' ')
     for (let i = 0; i < classes.length; i++) {
-      modal.classList.add(classes[i])
+      // modal.classList.add(classes[i])
+      contain.classList.add(classes[i])
     }
-    modal.classList.add('growing')
-    modal.style.height = '100%'
-    modal.style.width = '100%'
-    modal.style.top = '0'
-    modal.style.left = '0'
-    modal.style.right = '0'
+    // modal.classList.add('growing')
+    // modal.style.height = '100%'
+    // modal.style.width = '100%'
+    // modal.style.top = '0'
+    // modal.style.left = '0'
+    // modal.style.right = '0'
     // modal.style.margin = '0'
-    modal.style.background = 'rgba(255, 255, 255, 0.8)'
-  }, 1)
+    // modal.style.background = 'rgba(255, 255, 255, 0.8)'
+    contain.classList.add('growing')
+    contain.style.height = '100%'
+    contain.style.width = '100%'
+    contain.style.top = '0'
+    contain.style.left = '0'
+    contain.style.right = '0'
+    contain.style.margin = '0'
+    contain.style.background = 'rgba(255, 255, 255, 0.8)'
+  }, 0.5)
 
   setTimeout(function () {
-    modal.classList.remove('growing')
-    modal.classList.add('full-screen')
+    // modal.classList.remove('growing')
+    // modal.classList.add('full-screen')
+    contain.classList.remove('growing')
+    contain.classList.add('full-screen')
   }, 500)
 }
 
@@ -166,9 +175,11 @@ let closeModal = function (event) {
   target.style.margin = '0'
   target.classList.remove('full-screen')
   target.classList.add('shrinking')
+  // contain.classList.remove('full-screen')
+  // contain.classList.add('shrinking')
 
   setTimeout(function () {
-    while (target.firstChild) target.removeChild(target.firstChild)
+    while (target.secondChild) target.removeChild(target.secondChild)
     let classList = target.classList
     while (classList.length > 0) {
       classList.remove(classList.item(0))
