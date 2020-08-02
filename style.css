@@ -496,8 +496,16 @@ footer {
 
 
 .modal {
-  width: 400px;
+  /* width: 400px;
   display: flex;
+  flex-flow: column; */
+  background-color: red;
+  height: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 .modal__wrapper{
@@ -665,12 +673,14 @@ footer {
   /* padding: 0 20%;; */
   /* padding-top: 10.0625rem; */
   /* background-color: rgba(255, 255, 255, 0.8); */
-  /* background-color: red !important; */
+  background-color: red !important;
+  width: 100%;
   /* margin: 0 20%; */
   /* padding: 0 20%;
   padding-top: 10.0625rem; */
-  padding: 0 20%;
-  padding-top: 10.0625rem;
+
+  /* padding: 0 20%;
+  padding-top: 10.0625rem; */
 
   /* width: 100%;
   height: 100%; */
@@ -678,6 +688,12 @@ footer {
   /* position: relative; */
   box-sizing: border-box;
   overflow: auto;
+}
+.testmodal__wrapper{
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 20%;
+  padding-top: 10.0625rem;
+  position: relative;
 }
 
 .card__animated.full-screen {
