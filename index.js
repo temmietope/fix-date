@@ -7,7 +7,6 @@ const lightBox = document.querySelector('.lightbox')
 const body = document.body
 
 const openModal = () => {
-  // modal.style.display = 'block'
   let rect = card.getBoundingClientRect()
 
   modal.style.transformOrigin = `${rect.left}px ${rect.top}px`
@@ -15,10 +14,6 @@ const openModal = () => {
   body.classList.add('no-scroll')
 }
 const closeModal = () => {
-  // if (modal.style.display === 'block') {
-  //   modal.style.display = 'none'
-  //   body.classList.remove('no-scroll')
-  // }
   if (modal.classList.contains('open')) {
     modal.classList.remove('open')
     body.classList.remove('no-scroll')
@@ -36,7 +31,3 @@ lightBox.addEventListener('click', (e) => {
 close.forEach((item) => {
   item.addEventListener('click', closeModal)
 })
-
-// let rect = card.getBoundingClientRect()
-// console.log(rect.top, rect.right, rect.bottom, rect.left);
-// console.log(rect.left, rect.top)
