@@ -453,17 +453,21 @@ footer {
   display: flex;
   align-items: center;
   margin-bottom: 1.9rem;
+  box-sizing: border-box;
 }
 
 .modal__list li img {
   width: 4rem;
   height: 4rem;
-  margin-right: 1.75rem;
 }
 
 .modal__list__food {
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1.75rem;
+  box-sizing: border-box;
 }
 
 .modal__list__food h6 {
@@ -691,6 +695,9 @@ footer {
   footer {
     height: 4.625rem;
   }
+  .footer__wrapper {
+    padding: 0.625rem 1.875rem 1.25rem 1.875rem;
+  }
 
   .footer__wrapper li img {
     height: 1.25rem;
@@ -730,7 +737,10 @@ footer {
   .modal__list li img {
     width: 3.75rem;
     height: 3.75rem;
-    margin-right: 1.25rem;
+  }
+
+  .modal__list__food {
+    margin-left: 1.25rem;
   }
 
   .modal__list__food h6 {
@@ -852,7 +862,7 @@ footer {
   }
 
   .footer__wrapper {
-    padding: 1rem;
+    padding: 0.5rem 1.3rem 1rem 1.3rem;
   }
 
   .footer__wrapper li img {
@@ -894,7 +904,10 @@ footer {
   .modal__list li img {
     width: 2.9rem;
     height: 2.9rem;
-    margin-right: 5%;
+  }
+
+  .modal__list__food {
+    margin-left: 5%;
   }
 
   .modal__list__food h6 {
